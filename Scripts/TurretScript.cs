@@ -71,7 +71,6 @@ public class TurretScript : MonoBehaviour
         {
             turretFire();
         }
-        //Debug.Log("" + playerHit + canFire);
     }
 
     void TargetFind()
@@ -81,8 +80,6 @@ public class TurretScript : MonoBehaviour
        // Debug.DrawRay(turret.transform.position, direction * 1000 ,Color.green, 3);
         //raycast
         Physics.Raycast(turret.transform.position, direction, out HitInfo , 10000f, ~layerMask);
-        Debug.Log(HitInfo.collider);
-
         if(HitInfo.collider.tag == "Player")
         {
             playerHit = true;

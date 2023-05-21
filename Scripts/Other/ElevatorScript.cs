@@ -35,7 +35,6 @@ public class ElevatorScript : MonoBehaviour
         
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log("e;e;");
             canOpen = false;
 
             boxCollider.enabled = true;

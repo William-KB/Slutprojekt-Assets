@@ -84,9 +84,6 @@ public class WallrunScript : MonoBehaviour
 
            
         }
-            Debug.Log(canWallrun +"      iswr" + isWallRunning);
-        // check if i should jump off the wall
-  
     }
 
     void WallJump()
@@ -97,7 +94,7 @@ public class WallrunScript : MonoBehaviour
 
         //apply force upwards forwards and from the wall 
 
-        Vector3 wallJumpForce = rb.transform.forward * 1f + rb.transform.up * 0.75f + wallNormal * 2f;
+        Vector3 wallJumpForce = rb.transform.forward * 1.2f + rb.transform.up * 0.65f + wallNormal * 3f;
         rb.AddForce(wallJumpForce, ForceMode.Impulse);
         
     }

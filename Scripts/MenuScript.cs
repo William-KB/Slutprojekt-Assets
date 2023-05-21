@@ -24,6 +24,28 @@ public class MenuScript : MonoBehaviour
         Time.timeScale = 1;
     }
 
+
+
+    ////test to fix display
+     void Awake()
+    {
+#if !UNITY_EDITOR
+        // fixes new Unity2021 bug where the secondary monitor was being chosen when the game launches in a release build
+        StartCoroutine("MoveToPrimaryDisplay");
+#endif
+    }
+ 
+    IEnumerable MoveToPrimaryDisplay()
+    {
+        List<DisplayInfo> displays = new List<DisplayInfo>();
+        Screen.GetDisplayLayout(displays);
+        if (displays?.Count > 0)
+        {
+            var moveOperation = Screen.MoveMainWindowTo(displays[0], new Vector2Int(displays[0].width / 2, displays[0].height / 2));
+            yield return moveOperation;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

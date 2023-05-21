@@ -60,6 +60,12 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Level " + NextLevelNumber);
     }
 
+    public void BackToMenu()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void OnTriggerEnter(Collider other)
     {
         SavePlayerState();

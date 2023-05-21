@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 2820739570880803454}
   - component: {fileID: 655438074651269480}
   - component: {fileID: 5125614218340444344}
-  - component: {fileID: 8092459926418271078}
+  - component: {fileID: 1009518851055715057}
   m_Layer: 8
   m_Name: TurretPrefab
   m_TagString: Turret
@@ -278,7 +278,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8092459926418271078
+--- !u!114 &1009518851055715057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

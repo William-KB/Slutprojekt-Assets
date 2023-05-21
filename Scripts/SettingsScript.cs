@@ -20,6 +20,9 @@ public class SettingsScript : MonoBehaviour
     {
         fieldOfView = PlayerPrefs.GetFloat("Fov");
         Sensitivity = PlayerPrefs.GetFloat("Sensitivity");
+
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 200;
     }
 
     // Update is called once per frame

@@ -23,6 +23,8 @@ public class WeaponScript : MonoBehaviour
     public GameObject bullet;
     public GameObject casing;
 
+    public GameObject Crosshair;
+
     public Transform muzzle;
     public Transform shellEjector;
     
@@ -67,6 +69,8 @@ public class WeaponScript : MonoBehaviour
         isAiming = Input.GetButton("Aim");
         
         isFire = Input.GetButton("Fire1");
+
+        Crosshair.SetActive(!isAiming);
 
         if(wrScript.isWallRunning || sScript.isSliding)
         {
