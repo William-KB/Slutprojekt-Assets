@@ -21,6 +21,16 @@ public class SettingsScript : MonoBehaviour
         fieldOfView = PlayerPrefs.GetFloat("Fov");
         Sensitivity = PlayerPrefs.GetFloat("Sensitivity");
 
+      if(!PlayerPrefs.HasKey("Fov"))
+      {
+        fieldOfView = 65f;
+      }
+
+      if(!PlayerPrefs.HasKey("Sensitivity"))
+      {
+        Sensitivity = 1f;
+      }
+
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 200;
     }
